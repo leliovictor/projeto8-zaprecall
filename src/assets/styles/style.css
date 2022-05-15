@@ -211,3 +211,15 @@ footer p {
     line-height: 22px;
     color: #333333;
 }
+
+.green {
+    color: #2FBE34;
+}
+
+.red {
+    color: #FF3030;
+}
+
+.yellow {
+    color: #FF922E;
+}
