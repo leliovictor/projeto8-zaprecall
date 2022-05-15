@@ -199,7 +199,8 @@ footer {
     width: 100vw;
 
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     background: #FFFFFF;
@@ -227,6 +228,39 @@ footer p {
     align-items: center;
     font-size: 23px;
     padding-top: 2px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.result > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.result img {
+    width: 23px;
+    height: 23px;
+    margin-right: 12px;
+}
+
+.result h1 {
+    font-family: 'Recursive';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}   
+
+.result p {
+    max-width: 222px;
+    text-align: center;
 }
 
 .green {
