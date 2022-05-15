@@ -1,6 +1,7 @@
 import Logo from "../assets/images/logo.png";
 import Questions from "./Questions";
 import Footer from "./Footer";
+import React from 'react';
 
 const deck = [
     {
@@ -39,6 +40,8 @@ function shuffle() {
 export default function ZapScreen() {
     const questions = deck.sort(shuffle).slice(0, 4);
 
+    const [data,setData] = React.useState([]);
+    
     return (
         <section className="main-screen">
             <header>
@@ -46,9 +49,9 @@ export default function ZapScreen() {
                 <h1>ZapRecall</h1>
             </header>
             {questions.map((item, index) => (
-                <Questions key={index} index={index} quizz={questions[index]} />
+                <Questions key={index} index={index} quizz={questions[index]} data={data} setData={setData} />
             ))};
-            <Footer />
+            <Footer numberQuestion={questions.length} data={data} />
         </section>
     );
 }

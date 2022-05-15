@@ -3,7 +3,7 @@ import Flashcard from './Flashcard';
 import Arrow from "../assets/images/setinha.png";
 import AnswerButton from './Answerbutton';
 
-export default function Flashcards({quizz,setQuestion}) {
+export default function Flashcards({quizz,setQuestion, data, setData}) {
 
     const [flashcard,setFlashcard] = React.useState('question');
     const buttons = [{color:'red',text:'Não lembrei'},{color:'yellow',text:'Quase não lembrei'},{color:'green',text:'Zap!'}];
@@ -21,7 +21,7 @@ export default function Flashcards({quizz,setQuestion}) {
                         <p>{quizz.answer}</p>
                         <div className="buttons">
                             {buttons.map((obj,index) => 
-                            <AnswerButton key={index} color={obj.color} text={obj.text} setQuestion={setQuestion} />
+                            <AnswerButton key={index} color={obj.color} text={obj.text} setQuestion={setQuestion} data={data} setData={setData} />
                             )}  
                         </div>
                         
