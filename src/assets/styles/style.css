@@ -307,3 +307,36 @@ footer p {
 .yellow {
     color: #FF922E;
 }
+
+@media (min-width: 891px) {
+    
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .question,.flashcard {
+        max-width: 568px;
+        height: 92px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .question p {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .question ion-icon {
+        font-size: 36px;
+    }
+
+    footer p {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .result p {
+        max-width: 350px;
+    }
+}
