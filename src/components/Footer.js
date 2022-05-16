@@ -1,14 +1,9 @@
 import React from "react";
 import Party from "../assets/images/party.png";
 import Sad from "../assets/images/sad.png";
+import Icon from "./shared/Icon";
 
-export default function Footer({ numberQuestion, data }) {
-  const icons = {
-    red: <ion-icon key="0" class="red" name="close-circle"></ion-icon>,
-    yellow: <ion-icon key="1" class="yellow" name="help-circle"></ion-icon>,
-    green: <ion-icon key="2" class="green" name="checkmark-circle"></ion-icon>,
-  };
-
+export default function Footer({ numberQuestion, data, icons }) {
   function result() {
     if (data.length === numberQuestion) {
       return resultPontuation();
@@ -46,7 +41,15 @@ export default function Footer({ numberQuestion, data }) {
         <p>
           {data.length}/{numberQuestion} CONCLUÍDOS
         </p>
-        <div className="answerIcons">{data.map((color) => icons[color])}</div>
+        <div className="answerIcons">
+          {data.map((item, index) => (
+            <Icon
+              key={index}
+              color={icons[item].color}
+              name={icons[item].name}
+            />
+          ))}
+        </div>
       </div>
     </footer>
   );

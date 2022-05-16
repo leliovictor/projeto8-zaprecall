@@ -41,7 +41,13 @@ export default function ZapScreen() {
     const questions = deck.sort(shuffle).slice(0, 4);
 
     const [data,setData] = React.useState([]);
-    
+
+    const icons = {
+        red:{color:"red", name:"close-circle"},
+        yellow:{color:"yellow", name:"help-circle"}, 
+        green: {color:'green', name:"checkmark-circle"}
+      };
+
     return (
         <section className="main-screen">
             <header>
@@ -49,9 +55,9 @@ export default function ZapScreen() {
                 <h1>ZapRecall</h1>
             </header>
             {questions.map((item, index) => (
-                <Questions key={index} index={index} quizz={questions[index]} data={data} setData={setData} />
+                <Questions key={index} index={index} quizz={questions[index]} data={data} setData={setData} icons={icons}/>
             ))};
-            <Footer numberQuestion={questions.length} data={data} />
+            <Footer numberQuestion={questions.length} data={data} icons={icons}/>
         </section>
     );
 }
