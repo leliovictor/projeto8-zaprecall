@@ -35,7 +35,7 @@ body {
     margin-bottom: 30px;
 }
 
-.firstScreen button {
+.firstScreen .button {
     width: 246px;
     height: 54px;
 
@@ -47,13 +47,40 @@ body {
     font-family: 'Recursive';
     font-size: 18px;
     line-height: 22px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-
+    cursor: pointer;
     color: #D70900;
 }
 
+.firstScreen .disable {
+    background: #E8E8E8;
+    color: #C0C0C0;
+    border: none;
+}
+
+.firstScreen input {
+    width: 246px;
+    height: 43px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 16px;
+    border: none;
+    margin-bottom: 15px;
+
+    color: #FB6B6B;
+
+    opacity: 0.9;
+}
+
 .main-screen {
-    padding: 0 38px 70px 38px;
+    padding: 0 38px 40px 38px;
 }
 
 .main-screen header {
@@ -126,12 +153,17 @@ header img {
 
     width: 100%;
     height: fit-content;
+    min-height: 131px;
 
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 
     margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .flashcard p {
@@ -205,6 +237,7 @@ footer {
 
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    z-index: 2;
 }
 
 footer p {

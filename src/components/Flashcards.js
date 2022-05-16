@@ -13,7 +13,7 @@ export default function Flashcards({quizz,setQuestion, data, setData}) {
             {
                 flashcard === 'question' ? 
                     <Flashcard>
-                        <p>{quizz.question}</p>
+                        <p className="question-p">{quizz.question}</p>
                         <img src={Arrow} alt="Reveal answer" onClick={()=>setFlashcard('answer')} />
                     </Flashcard> 
                     : 

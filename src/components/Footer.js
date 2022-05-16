@@ -2,11 +2,11 @@ import React from "react";
 import Result from "./Result";
 import Icon from "./shared/Icon";
 
-export default function Footer({ numberQuestion, data, icons }) {
+export default function Footer({ numberQuestion, data, icons, goal}) {
   
   return (
     <footer>
-      <Result data={data} numberQuestion={numberQuestion} />
+      <Result data={data} numberQuestion={numberQuestion} goal={goal}/>
       <div className="pontuation">
         <p>
           {data.length}/{numberQuestion} CONCLUÍDOS

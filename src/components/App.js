@@ -8,10 +8,12 @@ export default function App() {
 
     const [screen, setScreen] = React.useState('StartScreen');
 
+    const [goal, setGoal] = React.useState('');
+
     return (
         <>
             {
-                screen === 'StartScreen' ? <StartScreen setScreen={setScreen} /> : <ZapScreen />
+                screen === 'StartScreen' ? <StartScreen setScreen={setScreen} setGoal={setGoal}/> : <ZapScreen goal={goal} />
             }
         </>
     );
