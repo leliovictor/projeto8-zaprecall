@@ -61,6 +61,20 @@ body {
     border: none;
 }
 
+.firstScreen select {
+    width: 246px;
+    height: 43px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #ADADAD;
+    margin-bottom: 15px;
+}
+
 .firstScreen input {
     width: 246px;
     height: 43px;
