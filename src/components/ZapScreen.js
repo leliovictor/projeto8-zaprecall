@@ -40,7 +40,7 @@ function shuffle() {
     return Math.random() - 0.5;
 }
 
-export default function ZapScreen({goal,deck}) {
+export default function ZapScreen({goal,deck,setScreen}) {
     const questions = decks[deck].sort(shuffle).slice(0, 4);
 
     const [data,setData] = React.useState([]);
@@ -60,7 +60,7 @@ export default function ZapScreen({goal,deck}) {
             {questions.map((item, index) => (
                 <Questions key={index} index={index} quizz={questions[index]} data={data} setData={setData} icons={icons}/>
             ))};
-            <Footer numberQuestion={questions.length} data={data} icons={icons} goal={goal}/>
+            <Footer numberQuestion={questions.length} data={data} setData={setData} icons={icons} goal={goal} setScreen={setScreen} />
         </section>
     );
 }

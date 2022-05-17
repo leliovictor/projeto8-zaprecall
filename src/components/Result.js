@@ -2,7 +2,7 @@ import ResultMessage from "./ResultMessage";
 
 let pontuation;
 
-export default function Result({ data, numberQuestion, goal }) {
+export default function Result({ data, numberQuestion, goal}) {
 
   return data.length === numberQuestion ? checkpontuation() : <></>;
 

@@ -322,6 +322,24 @@ footer p {
     color: #FF922E;
 }
 
+.rematch {
+    font-family: 'Recursive';
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+    color: #FFFFFF;
+    width: 167px;
+    height: 32px;
+
+    background: #FB6B6B;
+    border-radius: 5px;
+    margin-bottom: 21px;
+}
+
 @media (min-width: 891px) {
     
     .content {
